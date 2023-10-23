@@ -34,13 +34,13 @@
             this.txBx4Edad = new System.Windows.Forms.TextBox();
             this.txBx5Nombre = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rB1Hombre = new System.Windows.Forms.RadioButton();
             this.rB2Mujer = new System.Windows.Forms.RadioButton();
-            this.lbl1Nombre = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.rB1Hombre = new System.Windows.Forms.RadioButton();
+            this.tbNombre = new System.Windows.Forms.Label();
+            this.tbApellidos = new System.Windows.Forms.Label();
+            this.tbTelefono = new System.Windows.Forms.Label();
+            this.tbEstatura = new System.Windows.Forms.Label();
+            this.tbEdad = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -73,6 +73,7 @@
             this.txBx4Edad.Name = "txBx4Edad";
             this.txBx4Edad.Size = new System.Drawing.Size(178, 22);
             this.txBx4Edad.TabIndex = 3;
+            this.txBx4Edad.TextChanged += new System.EventHandler(this.txBx4Edad_TextChanged);
             // 
             // txBx5Nombre
             // 
@@ -80,6 +81,7 @@
             this.txBx5Nombre.Name = "txBx5Nombre";
             this.txBx5Nombre.Size = new System.Drawing.Size(178, 22);
             this.txBx5Nombre.TabIndex = 4;
+            this.txBx5Nombre.TextChanged += new System.EventHandler(this.txBx5Nombre_TextChanged);
             // 
             // groupBox1
             // 
@@ -92,17 +94,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Genero ";
             // 
-            // rB1Hombre
-            // 
-            this.rB1Hombre.AutoSize = true;
-            this.rB1Hombre.Location = new System.Drawing.Point(7, 42);
-            this.rB1Hombre.Name = "rB1Hombre";
-            this.rB1Hombre.Size = new System.Drawing.Size(77, 20);
-            this.rB1Hombre.TabIndex = 0;
-            this.rB1Hombre.TabStop = true;
-            this.rB1Hombre.Text = "Hombre";
-            this.rB1Hombre.UseVisualStyleBackColor = true;
-            // 
             // rB2Mujer
             // 
             this.rB2Mujer.AutoSize = true;
@@ -114,58 +105,69 @@
             this.rB2Mujer.Text = "Mujer";
             this.rB2Mujer.UseVisualStyleBackColor = true;
             // 
-            // lbl1Nombre
+            // rB1Hombre
             // 
-            this.lbl1Nombre.AutoSize = true;
-            this.lbl1Nombre.Location = new System.Drawing.Point(12, 49);
-            this.lbl1Nombre.Name = "lbl1Nombre";
-            this.lbl1Nombre.Size = new System.Drawing.Size(56, 16);
-            this.lbl1Nombre.TabIndex = 6;
-            this.lbl1Nombre.Text = "Nombre";
+            this.rB1Hombre.AutoSize = true;
+            this.rB1Hombre.Location = new System.Drawing.Point(7, 42);
+            this.rB1Hombre.Name = "rB1Hombre";
+            this.rB1Hombre.Size = new System.Drawing.Size(77, 20);
+            this.rB1Hombre.TabIndex = 0;
+            this.rB1Hombre.TabStop = true;
+            this.rB1Hombre.Text = "Hombre";
+            this.rB1Hombre.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // tbNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Apellidos";
+            this.tbNombre.AutoSize = true;
+            this.tbNombre.Location = new System.Drawing.Point(12, 49);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(56, 16);
+            this.tbNombre.TabIndex = 6;
+            this.tbNombre.Text = "Nombre";
             // 
-            // label3
+            // tbApellidos
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 143);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 16);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Telefono";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.tbApellidos.AutoSize = true;
+            this.tbApellidos.Location = new System.Drawing.Point(12, 94);
+            this.tbApellidos.Name = "tbApellidos";
+            this.tbApellidos.Size = new System.Drawing.Size(64, 16);
+            this.tbApellidos.TabIndex = 7;
+            this.tbApellidos.Text = "Apellidos";
             // 
-            // label4
+            // tbTelefono
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 16);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Estatura";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.tbTelefono.AutoSize = true;
+            this.tbTelefono.Location = new System.Drawing.Point(12, 143);
+            this.tbTelefono.Name = "tbTelefono";
+            this.tbTelefono.Size = new System.Drawing.Size(61, 16);
+            this.tbTelefono.TabIndex = 8;
+            this.tbTelefono.Text = "Telefono";
+            this.tbTelefono.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label5
+            // tbEstatura
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 218);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "edad";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.tbEstatura.AutoSize = true;
+            this.tbEstatura.Location = new System.Drawing.Point(12, 185);
+            this.tbEstatura.Name = "tbEstatura";
+            this.tbEstatura.Size = new System.Drawing.Size(56, 16);
+            this.tbEstatura.TabIndex = 9;
+            this.tbEstatura.Text = "Estatura";
+            this.tbEstatura.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // tbEdad
+            // 
+            this.tbEdad.AutoSize = true;
+            this.tbEdad.Location = new System.Drawing.Point(12, 218);
+            this.tbEdad.Name = "tbEdad";
+            this.tbEdad.Size = new System.Drawing.Size(39, 16);
+            this.tbEdad.TabIndex = 10;
+            this.tbEdad.Text = "edad";
+            this.tbEdad.Click += new System.EventHandler(this.label5_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(467, 91);
+            this.button1.Location = new System.Drawing.Point(130, 383);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 61);
             this.button1.TabIndex = 11;
@@ -176,7 +178,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button2.Location = new System.Drawing.Point(468, 212);
+            this.button2.Location = new System.Drawing.Point(130, 477);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 67);
             this.button2.TabIndex = 12;
@@ -188,14 +190,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(694, 591);
+            this.BackgroundImage = global::formulario_datos.Properties.Resources.FB_IMG_1651856440055;
+            this.ClientSize = new System.Drawing.Size(962, 591);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lbl1Nombre);
+            this.Controls.Add(this.tbEdad);
+            this.Controls.Add(this.tbEstatura);
+            this.Controls.Add(this.tbTelefono);
+            this.Controls.Add(this.tbApellidos);
+            this.Controls.Add(this.tbNombre);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txBx5Nombre);
             this.Controls.Add(this.txBx4Edad);
@@ -221,11 +224,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rB2Mujer;
         private System.Windows.Forms.RadioButton rB1Hombre;
-        private System.Windows.Forms.Label lbl1Nombre;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label tbNombre;
+        private System.Windows.Forms.Label tbApellidos;
+        private System.Windows.Forms.Label tbTelefono;
+        private System.Windows.Forms.Label tbEstatura;
+        private System.Windows.Forms.Label tbEdad;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
